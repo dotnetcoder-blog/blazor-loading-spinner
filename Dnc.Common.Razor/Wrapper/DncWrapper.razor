@@ -1,0 +1,22 @@
+﻿@inherits DncWrapperComponent
+
+<div class="dnc-wrapper">
+    <div class="loading @(Loading ? "show" : "")">
+        @if (Loading)
+        {
+            <div class="dnc-wrapper-spin fa-x3 d-flex justify-content-center align-items-center">
+                <div>
+                    <i class="fas fa-circle-notch fa-spin"></i>
+                    <div>
+                        <span>Loading...</span>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+
+    <CascadingValue Value="this">
+        @ChildContent
+    </CascadingValue>
+</div>
